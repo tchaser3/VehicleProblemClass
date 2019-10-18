@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3A5B8E9-036A-444A-BB2C-A3151E12D9B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VehicleProblemsDLL</RootNamespace>
+    <AssemblyName>VehicleProblemsDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeProblemInvoiceNumberEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangeProblemInvoiceNumberEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeVehicleProblemStatusEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangeVehicleProblemStatusEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllVehicleMainProblemsByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllVehicleMainProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllVehicleMainProblemsByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllVehicleMainProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenVehicleMainProblemsByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenVehicleMainProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenVehicleMainProblemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenVehicleMainProblemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenVehicleProblemsByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenVehicleProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenVehicleProblemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenVehicleProblemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenVehicleProblemsNeedingServiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenVehicleProblemsNeedingServiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleMainProblemByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleMainProblemByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleMainProblemByProblemIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleMainProblemByProblemIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleMainProblemUpdateByProblemIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleMainProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemByProblemIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemByProblemIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemByVehicleIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemHistoryByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemHistoryByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemUpdateByProblemIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleProblemUpdateByVehicleIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleProblemUpdateByVehicleIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertVehicleProblemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertVehicleProblemEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertVehicleProblemUpdateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertVehicleProblemUpdateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVehicleProblemCostRecord.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateVehicleProblemCostRecord.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVehicleProblemResolutionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateVehicleProblemResolutionEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVehicleProblemSolvedRecord.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateVehicleProblemSolvedRecord.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVehicleVendorIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateVehicleVendorIDEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleProblemClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleProblemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleProblemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleProblemUpdateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleProblemUpdateDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ChangeProblemInvoiceNumberEntry.xsc">
+      <DependentUpon>ChangeProblemInvoiceNumberEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ChangeProblemInvoiceNumberEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChangeProblemInvoiceNumberEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChangeProblemInvoiceNumberEntry.xss">
+      <DependentUpon>ChangeProblemInvoiceNumberEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ChangeVehicleProblemStatusEntry.xsc">
+      <DependentUpon>ChangeVehicleProblemStatusEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ChangeVehicleProblemStatusEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChangeVehicleProblemStatusEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChangeVehicleProblemStatusEntry.xss">
+      <DependentUpon>ChangeVehicleProblemStatusEntry.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllVehicleMainProblemsByDateRangeDataSet.xsc">
+      <DependentUpon>FindAllVehicleMainProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllVehicleMainProblemsByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllVehicleMainProblemsByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllVehicleMainProblemsByDateRangeDataSet.xss">
+      <DependentUpon>FindAllVehicleMainProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllVehicleMainProblemsByVehicleIDDataSet.xsc">
+      <DependentUpon>FindAllVehicleMainProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllVehicleMainProblemsByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllVehicleMainProblemsByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllVehicleMainProblemsByVehicleIDDataSet.xss">
+      <DependentUpon>FindAllVehicleMainProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.xsc">
+      <DependentUpon>FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.xss">
+      <DependentUpon>FindOpenVehicleMainDashboardProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleMainProblemsByVehicleIDDataSet.xsc">
+      <DependentUpon>FindOpenVehicleMainProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleMainProblemsByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenVehicleMainProblemsByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenVehicleMainProblemsByVehicleIDDataSet.xss">
+      <DependentUpon>FindOpenVehicleMainProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleMainProblemsDataSet.xsc">
+      <DependentUpon>FindOpenVehicleMainProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleMainProblemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenVehicleMainProblemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenVehicleMainProblemsDataSet.xss">
+      <DependentUpon>FindOpenVehicleMainProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleProblemsByVehicleIDDataSet.xsc">
+      <DependentUpon>FindOpenVehicleProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleProblemsByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenVehicleProblemsByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenVehicleProblemsByVehicleIDDataSet.xss">
+      <DependentUpon>FindOpenVehicleProblemsByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleProblemsDataSet.xsc">
+      <DependentUpon>FindOpenVehicleProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleProblemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenVehicleProblemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenVehicleProblemsDataSet.xss">
+      <DependentUpon>FindOpenVehicleProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleProblemsNeedingServiceDataSet.xsc">
+      <DependentUpon>FindOpenVehicleProblemsNeedingServiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenVehicleProblemsNeedingServiceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenVehicleProblemsNeedingServiceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenVehicleProblemsNeedingServiceDataSet.xss">
+      <DependentUpon>FindOpenVehicleProblemsNeedingServiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemByDateRangeDataSet.xsc">
+      <DependentUpon>FindVehicleMainProblemByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleMainProblemByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleMainProblemByDateRangeDataSet.xss">
+      <DependentUpon>FindVehicleMainProblemByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemByProblemIDDataSet.xsc">
+      <DependentUpon>FindVehicleMainProblemByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemByProblemIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleMainProblemByProblemIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleMainProblemByProblemIDDataSet.xss">
+      <DependentUpon>FindVehicleMainProblemByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemUpdateByProblemIDDataSet.xsc">
+      <DependentUpon>FindVehicleMainProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemUpdateByProblemIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleMainProblemUpdateByProblemIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleMainProblemUpdateByProblemIDDataSet.xss">
+      <DependentUpon>FindVehicleMainProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.xsc">
+      <DependentUpon>FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.xss">
+      <DependentUpon>FindVehicleMainProblemUpdateDashboardByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByDateMatchDataSet.xsc">
+      <DependentUpon>FindVehicleProblemByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemByDateMatchDataSet.xss">
+      <DependentUpon>FindVehicleProblemByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByDateRangeDataSet.xsc">
+      <DependentUpon>FindVehicleProblemByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemByDateRangeDataSet.xss">
+      <DependentUpon>FindVehicleProblemByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByProblemIDDataSet.xsc">
+      <DependentUpon>FindVehicleProblemByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByProblemIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemByProblemIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemByProblemIDDataSet.xss">
+      <DependentUpon>FindVehicleProblemByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByVehicleIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindVehicleProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemByVehicleIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemByVehicleIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemByVehicleIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindVehicleProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemHistoryByVehicleIDDataSet.xsc">
+      <DependentUpon>FindVehicleProblemHistoryByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemHistoryByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemHistoryByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemHistoryByVehicleIDDataSet.xss">
+      <DependentUpon>FindVehicleProblemHistoryByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemUpdateByProblemIDDataSet.xsc">
+      <DependentUpon>FindVehicleProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemUpdateByProblemIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemUpdateByProblemIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemUpdateByProblemIDDataSet.xss">
+      <DependentUpon>FindVehicleProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemUpdateByVehicleIDDataSet.xsc">
+      <DependentUpon>FindVehicleProblemUpdateByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleProblemUpdateByVehicleIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleProblemUpdateByVehicleIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleProblemUpdateByVehicleIDDataSet.xss">
+      <DependentUpon>FindVehicleProblemUpdateByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleProblemEntry.xsc">
+      <DependentUpon>InsertVehicleProblemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleProblemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertVehicleProblemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertVehicleProblemEntry.xss">
+      <DependentUpon>InsertVehicleProblemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleProblemUpdateEntry.xsc">
+      <DependentUpon>InsertVehicleProblemUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleProblemUpdateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertVehicleProblemUpdateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertVehicleProblemUpdateEntry.xss">
+      <DependentUpon>InsertVehicleProblemUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateVehicleProblemCostRecord.xsc">
+      <DependentUpon>UpdateVehicleProblemCostRecord.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleProblemCostRecord.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateVehicleProblemCostRecord.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateVehicleProblemCostRecord.xss">
+      <DependentUpon>UpdateVehicleProblemCostRecord.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleProblemResolutionEntry.xsc">
+      <DependentUpon>UpdateVehicleProblemResolutionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleProblemResolutionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateVehicleProblemResolutionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateVehicleProblemResolutionEntry.xss">
+      <DependentUpon>UpdateVehicleProblemResolutionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleProblemSolvedRecord.xsc">
+      <DependentUpon>UpdateVehicleProblemSolvedRecord.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleProblemSolvedRecord.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateVehicleProblemSolvedRecord.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateVehicleProblemSolvedRecord.xss">
+      <DependentUpon>UpdateVehicleProblemSolvedRecord.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleVendorIDEntry.xsc">
+      <DependentUpon>UpdateVehicleVendorIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateVehicleVendorIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateVehicleVendorIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateVehicleVendorIDEntry.xss">
+      <DependentUpon>UpdateVehicleVendorIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleProblemsDataSet.xsc">
+      <DependentUpon>VehicleProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleProblemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleProblemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VehicleProblemsDataSet.xss">
+      <DependentUpon>VehicleProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleProblemUpdateDataSet.xsc">
+      <DependentUpon>VehicleProblemUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleProblemUpdateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleProblemUpdateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VehicleProblemUpdateDataSet.xss">
+      <DependentUpon>VehicleProblemUpdateDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
