@@ -98,6 +98,24 @@ namespace VehicleProblemsDLL
         FindAllVehicleMainProblemsByDateRangeDataSet aFindAllVehicleMainProblemsByDateRangeDataSet;
         FindAllVehicleMainProblemsByDateRangeDataSetTableAdapters.FindAllVehicleMainProblemsByDateRangeTableAdapter aFindAllVehicleMainProblemsByDateRangeTableAdapter;
 
+        FindVehicleMainProblemReadyForInvoicingDataSet aFindVehicleMainProblemReadyForInvoicingDataSet;
+        FindVehicleMainProblemReadyForInvoicingDataSetTableAdapters.FindVehicleMainProblemReadyForInvoicingTableAdapter aFindVehicleMainProblemREadyForInvoicingTableAdapter;
+
+        public FindVehicleMainProblemReadyForInvoicingDataSet FindVehicleMainProblemReadyForInvoicing(int intVehicleID)
+        {
+            try
+            {
+                aFindVehicleMainProblemReadyForInvoicingDataSet = new FindVehicleMainProblemReadyForInvoicingDataSet();
+                aFindVehicleMainProblemREadyForInvoicingTableAdapter = new FindVehicleMainProblemReadyForInvoicingDataSetTableAdapters.FindVehicleMainProblemReadyForInvoicingTableAdapter();
+                aFindVehicleMainProblemREadyForInvoicingTableAdapter.Fill(aFindVehicleMainProblemReadyForInvoicingDataSet.FindVehicleMainProblemReadyForInvoicing, intVehicleID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Vehicle Problem Class // Find Vehicle Main Problem Ready For Invoicing " + Ex.Message);
+            }
+
+            return aFindVehicleMainProblemReadyForInvoicingDataSet;
+        }
         public FindAllVehicleMainProblemsByDateRangeDataSet FindAllVehicleMainProblemsByDateRange(int intVehicleID, DateTime datStartDate, DateTime datEndDate)
         {
             try

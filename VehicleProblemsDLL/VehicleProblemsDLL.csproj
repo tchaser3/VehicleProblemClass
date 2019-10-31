@@ -108,6 +108,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindVehicleMainProblemReadyForInvoicingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleMainProblemReadyForInvoicingDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindVehicleMainProblemUpdateByProblemIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -345,6 +350,17 @@
     </None>
     <None Include="FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xss">
       <DependentUpon>FindVehicleMainProblemByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemReadyForInvoicingDataSet.xsc">
+      <DependentUpon>FindVehicleMainProblemReadyForInvoicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleMainProblemReadyForInvoicingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleMainProblemReadyForInvoicingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleMainProblemReadyForInvoicingDataSet.xss">
+      <DependentUpon>FindVehicleMainProblemReadyForInvoicingDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindVehicleMainProblemUpdateByProblemIDDataSet.xsc">
       <DependentUpon>FindVehicleMainProblemUpdateByProblemIDDataSet.xsd</DependentUpon>
