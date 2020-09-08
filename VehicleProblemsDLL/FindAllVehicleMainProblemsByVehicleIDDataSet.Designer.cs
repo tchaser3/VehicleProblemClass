@@ -281,19 +281,23 @@ namespace VehicleProblemsDLL {
             
             private global::System.Data.DataColumn columnProblemID;
             
-            private global::System.Data.DataColumn columnVehicleNumber;
-            
-            private global::System.Data.DataColumn columnTransactionDAte;
+            private global::System.Data.DataColumn columnTransactionDate;
             
             private global::System.Data.DataColumn columnProblem;
             
-            private global::System.Data.DataColumn columnProblemSolved;
+            private global::System.Data.DataColumn columnVehicleID;
             
-            private global::System.Data.DataColumn columnProblemCost;
-            
-            private global::System.Data.DataColumn columnVendorName;
+            private global::System.Data.DataColumn columnProblemStatus;
             
             private global::System.Data.DataColumn columnProblemResolution;
+            
+            private global::System.Data.DataColumn columnInvoiceID;
+            
+            private global::System.Data.DataColumn columnInvoiceDate;
+            
+            private global::System.Data.DataColumn columnInvoiceAmount;
+            
+            private global::System.Data.DataColumn columnInvoicePath;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -338,17 +342,9 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn VehicleNumberColumn {
+            public global::System.Data.DataColumn TransactionDateColumn {
                 get {
-                    return this.columnVehicleNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TransactionDAteColumn {
-                get {
-                    return this.columnTransactionDAte;
+                    return this.columnTransactionDate;
                 }
             }
             
@@ -362,25 +358,17 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ProblemSolvedColumn {
+            public global::System.Data.DataColumn VehicleIDColumn {
                 get {
-                    return this.columnProblemSolved;
+                    return this.columnVehicleID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ProblemCostColumn {
+            public global::System.Data.DataColumn ProblemStatusColumn {
                 get {
-                    return this.columnProblemCost;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn VendorNameColumn {
-                get {
-                    return this.columnVendorName;
+                    return this.columnProblemStatus;
                 }
             }
             
@@ -389,6 +377,38 @@ namespace VehicleProblemsDLL {
             public global::System.Data.DataColumn ProblemResolutionColumn {
                 get {
                     return this.columnProblemResolution;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InvoiceIDColumn {
+                get {
+                    return this.columnInvoiceID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InvoiceDateColumn {
+                get {
+                    return this.columnInvoiceDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InvoiceAmountColumn {
+                get {
+                    return this.columnInvoiceAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InvoicePathColumn {
+                get {
+                    return this.columnInvoicePath;
                 }
             }
             
@@ -429,27 +449,22 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindAllVehicleMainProblemsByVehicleIDRow AddFindAllVehicleMainProblemsByVehicleIDRow(int ProblemID, string VehicleNumber, System.DateTime TransactionDAte, string Problem, bool ProblemSolved, double ProblemCost, string VendorName, string ProblemResolution) {
+            public FindAllVehicleMainProblemsByVehicleIDRow AddFindAllVehicleMainProblemsByVehicleIDRow(int ProblemID, System.DateTime TransactionDate, string Problem, int VehicleID, string ProblemStatus, string ProblemResolution, int InvoiceID, System.DateTime InvoiceDate, decimal InvoiceAmount, string InvoicePath) {
                 FindAllVehicleMainProblemsByVehicleIDRow rowFindAllVehicleMainProblemsByVehicleIDRow = ((FindAllVehicleMainProblemsByVehicleIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ProblemID,
-                        VehicleNumber,
-                        TransactionDAte,
+                        TransactionDate,
                         Problem,
-                        ProblemSolved,
-                        ProblemCost,
-                        VendorName,
-                        ProblemResolution};
+                        VehicleID,
+                        ProblemStatus,
+                        ProblemResolution,
+                        InvoiceID,
+                        InvoiceDate,
+                        InvoiceAmount,
+                        InvoicePath};
                 rowFindAllVehicleMainProblemsByVehicleIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindAllVehicleMainProblemsByVehicleIDRow);
                 return rowFindAllVehicleMainProblemsByVehicleIDRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindAllVehicleMainProblemsByVehicleIDRow FindByProblemID(int ProblemID) {
-                return ((FindAllVehicleMainProblemsByVehicleIDRow)(this.Rows.Find(new object[] {
-                            ProblemID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,13 +485,15 @@ namespace VehicleProblemsDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnProblemID = base.Columns["ProblemID"];
-                this.columnVehicleNumber = base.Columns["VehicleNumber"];
-                this.columnTransactionDAte = base.Columns["TransactionDAte"];
+                this.columnTransactionDate = base.Columns["TransactionDate"];
                 this.columnProblem = base.Columns["Problem"];
-                this.columnProblemSolved = base.Columns["ProblemSolved"];
-                this.columnProblemCost = base.Columns["ProblemCost"];
-                this.columnVendorName = base.Columns["VendorName"];
+                this.columnVehicleID = base.Columns["VehicleID"];
+                this.columnProblemStatus = base.Columns["ProblemStatus"];
                 this.columnProblemResolution = base.Columns["ProblemResolution"];
+                this.columnInvoiceID = base.Columns["InvoiceID"];
+                this.columnInvoiceDate = base.Columns["InvoiceDate"];
+                this.columnInvoiceAmount = base.Columns["InvoiceAmount"];
+                this.columnInvoicePath = base.Columns["InvoicePath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,34 +501,32 @@ namespace VehicleProblemsDLL {
             private void InitClass() {
                 this.columnProblemID = new global::System.Data.DataColumn("ProblemID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProblemID);
-                this.columnVehicleNumber = new global::System.Data.DataColumn("VehicleNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVehicleNumber);
-                this.columnTransactionDAte = new global::System.Data.DataColumn("TransactionDAte", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransactionDAte);
+                this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionDate);
                 this.columnProblem = new global::System.Data.DataColumn("Problem", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProblem);
-                this.columnProblemSolved = new global::System.Data.DataColumn("ProblemSolved", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProblemSolved);
-                this.columnProblemCost = new global::System.Data.DataColumn("ProblemCost", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProblemCost);
-                this.columnVendorName = new global::System.Data.DataColumn("VendorName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVendorName);
+                this.columnVehicleID = new global::System.Data.DataColumn("VehicleID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVehicleID);
+                this.columnProblemStatus = new global::System.Data.DataColumn("ProblemStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProblemStatus);
                 this.columnProblemResolution = new global::System.Data.DataColumn("ProblemResolution", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProblemResolution);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnProblemID}, true));
+                this.columnInvoiceID = new global::System.Data.DataColumn("InvoiceID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvoiceID);
+                this.columnInvoiceDate = new global::System.Data.DataColumn("InvoiceDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvoiceDate);
+                this.columnInvoiceAmount = new global::System.Data.DataColumn("InvoiceAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvoiceAmount);
+                this.columnInvoicePath = new global::System.Data.DataColumn("InvoicePath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvoicePath);
                 this.columnProblemID.AllowDBNull = false;
-                this.columnProblemID.Unique = true;
-                this.columnVehicleNumber.AllowDBNull = false;
-                this.columnVehicleNumber.MaxLength = 2147483647;
-                this.columnTransactionDAte.AllowDBNull = false;
+                this.columnTransactionDate.AllowDBNull = false;
                 this.columnProblem.AllowDBNull = false;
                 this.columnProblem.MaxLength = 2147483647;
-                this.columnProblemSolved.AllowDBNull = false;
-                this.columnProblemCost.AllowDBNull = false;
-                this.columnVendorName.AllowDBNull = false;
-                this.columnVendorName.MaxLength = 2147483647;
+                this.columnVehicleID.AllowDBNull = false;
+                this.columnProblemStatus.MaxLength = 2147483647;
                 this.columnProblemResolution.MaxLength = 2147483647;
+                this.columnInvoicePath.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -665,23 +680,12 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string VehicleNumber {
+            public System.DateTime TransactionDate {
                 get {
-                    return ((string)(this[this.tableFindAllVehicleMainProblemsByVehicleID.VehicleNumberColumn]));
+                    return ((global::System.DateTime)(this[this.tableFindAllVehicleMainProblemsByVehicleID.TransactionDateColumn]));
                 }
                 set {
-                    this[this.tableFindAllVehicleMainProblemsByVehicleID.VehicleNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime TransactionDAte {
-                get {
-                    return ((global::System.DateTime)(this[this.tableFindAllVehicleMainProblemsByVehicleID.TransactionDAteColumn]));
-                }
-                set {
-                    this[this.tableFindAllVehicleMainProblemsByVehicleID.TransactionDAteColumn] = value;
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.TransactionDateColumn] = value;
                 }
             }
             
@@ -698,34 +702,29 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool ProblemSolved {
+            public int VehicleID {
                 get {
-                    return ((bool)(this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemSolvedColumn]));
+                    return ((int)(this[this.tableFindAllVehicleMainProblemsByVehicleID.VehicleIDColumn]));
                 }
                 set {
-                    this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemSolvedColumn] = value;
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.VehicleIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double ProblemCost {
+            public string ProblemStatus {
                 get {
-                    return ((double)(this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemCostColumn]));
+                    try {
+                        return ((string)(this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemStatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProblemStatus\' in table \'FindAllVehicleMainProblemsByVehicl" +
+                                "eID\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemCostColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string VendorName {
-                get {
-                    return ((string)(this[this.tableFindAllVehicleMainProblemsByVehicleID.VendorNameColumn]));
-                }
-                set {
-                    this[this.tableFindAllVehicleMainProblemsByVehicleID.VendorNameColumn] = value;
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemStatusColumn] = value;
                 }
             }
             
@@ -748,6 +747,86 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int InvoiceID {
+                get {
+                    try {
+                        return ((int)(this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'InvoiceID\' in table \'FindAllVehicleMainProblemsByVehicleID\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime InvoiceDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'InvoiceDate\' in table \'FindAllVehicleMainProblemsByVehicleI" +
+                                "D\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal InvoiceAmount {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceAmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'InvoiceAmount\' in table \'FindAllVehicleMainProblemsByVehicl" +
+                                "eID\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceAmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string InvoicePath {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoicePathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'InvoicePath\' in table \'FindAllVehicleMainProblemsByVehicleI" +
+                                "D\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoicePathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsProblemStatusNull() {
+                return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.ProblemStatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetProblemStatusNull() {
+                this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemStatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsProblemResolutionNull() {
                 return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.ProblemResolutionColumn);
             }
@@ -756,6 +835,54 @@ namespace VehicleProblemsDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetProblemResolutionNull() {
                 this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemResolutionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInvoiceIDNull() {
+                return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInvoiceIDNull() {
+                this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInvoiceDateNull() {
+                return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInvoiceDateNull() {
+                this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInvoiceAmountNull() {
+                return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceAmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInvoiceAmountNull() {
+                this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoiceAmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInvoicePathNull() {
+                return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.InvoicePathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInvoicePathNull() {
+                this[this.tableFindAllVehicleMainProblemsByVehicleID.InvoicePathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -919,13 +1046,15 @@ namespace VehicleProblemsDLL.FindAllVehicleMainProblemsByVehicleIDDataSetTableAd
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FindAllVehicleMainProblemsByVehicleID";
             tableMapping.ColumnMappings.Add("ProblemID", "ProblemID");
-            tableMapping.ColumnMappings.Add("VehicleNumber", "VehicleNumber");
-            tableMapping.ColumnMappings.Add("TransactionDAte", "TransactionDAte");
+            tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
             tableMapping.ColumnMappings.Add("Problem", "Problem");
-            tableMapping.ColumnMappings.Add("ProblemSolved", "ProblemSolved");
-            tableMapping.ColumnMappings.Add("ProblemCost", "ProblemCost");
-            tableMapping.ColumnMappings.Add("VendorName", "VendorName");
+            tableMapping.ColumnMappings.Add("VehicleID", "VehicleID");
+            tableMapping.ColumnMappings.Add("ProblemStatus", "ProblemStatus");
             tableMapping.ColumnMappings.Add("ProblemResolution", "ProblemResolution");
+            tableMapping.ColumnMappings.Add("InvoiceID", "InvoiceID");
+            tableMapping.ColumnMappings.Add("InvoiceDate", "InvoiceDate");
+            tableMapping.ColumnMappings.Add("InvoiceAmount", "InvoiceAmount");
+            tableMapping.ColumnMappings.Add("InvoicePath", "InvoicePath");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

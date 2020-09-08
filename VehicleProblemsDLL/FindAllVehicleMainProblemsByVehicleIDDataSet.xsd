@@ -23,13 +23,15 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="ProblemID" DataSetColumn="ProblemID" />
-              <Mapping SourceColumn="VehicleNumber" DataSetColumn="VehicleNumber" />
-              <Mapping SourceColumn="TransactionDAte" DataSetColumn="TransactionDAte" />
+              <Mapping SourceColumn="TransactionDate" DataSetColumn="TransactionDate" />
               <Mapping SourceColumn="Problem" DataSetColumn="Problem" />
-              <Mapping SourceColumn="ProblemSolved" DataSetColumn="ProblemSolved" />
-              <Mapping SourceColumn="ProblemCost" DataSetColumn="ProblemCost" />
-              <Mapping SourceColumn="VendorName" DataSetColumn="VendorName" />
+              <Mapping SourceColumn="VehicleID" DataSetColumn="VehicleID" />
+              <Mapping SourceColumn="ProblemStatus" DataSetColumn="ProblemStatus" />
               <Mapping SourceColumn="ProblemResolution" DataSetColumn="ProblemResolution" />
+              <Mapping SourceColumn="InvoiceID" DataSetColumn="InvoiceID" />
+              <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
+              <Mapping SourceColumn="InvoiceAmount" DataSetColumn="InvoiceAmount" />
+              <Mapping SourceColumn="InvoicePath" DataSetColumn="InvoicePath" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -41,18 +43,11 @@
   <xs:element name="FindAllVehicleMainProblemsByVehicleIDDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindAllVehicleMainProblemsByVehicleIDDataSet" msprop:Generator_UserDSName="FindAllVehicleMainProblemsByVehicleIDDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_TableClassName="FindAllVehicleMainProblemsByVehicleIDDataTable" msprop:Generator_TableVarName="tableFindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowChangedName="FindAllVehicleMainProblemsByVehicleIDRowChanged" msprop:Generator_TablePropName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowDeletingName="FindAllVehicleMainProblemsByVehicleIDRowDeleting" msprop:Generator_RowChangingName="FindAllVehicleMainProblemsByVehicleIDRowChanging" msprop:Generator_RowEvHandlerName="FindAllVehicleMainProblemsByVehicleIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindAllVehicleMainProblemsByVehicleIDRowDeleted" msprop:Generator_RowClassName="FindAllVehicleMainProblemsByVehicleIDRow" msprop:Generator_UserTableName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowEvArgName="FindAllVehicleMainProblemsByVehicleIDRowChangeEvent">
+        <xs:element name="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_TableClassName="FindAllVehicleMainProblemsByVehicleIDDataTable" msprop:Generator_TableVarName="tableFindAllVehicleMainProblemsByVehicleID" msprop:Generator_TablePropName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowDeletingName="FindAllVehicleMainProblemsByVehicleIDRowDeleting" msprop:Generator_RowChangingName="FindAllVehicleMainProblemsByVehicleIDRowChanging" msprop:Generator_RowEvHandlerName="FindAllVehicleMainProblemsByVehicleIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindAllVehicleMainProblemsByVehicleIDRowDeleted" msprop:Generator_UserTableName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowChangedName="FindAllVehicleMainProblemsByVehicleIDRowChanged" msprop:Generator_RowEvArgName="FindAllVehicleMainProblemsByVehicleIDRowChangeEvent" msprop:Generator_RowClassName="FindAllVehicleMainProblemsByVehicleIDRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProblemID" msprop:Generator_ColumnVarNameInTable="columnProblemID" msprop:Generator_ColumnPropNameInRow="ProblemID" msprop:Generator_ColumnPropNameInTable="ProblemIDColumn" msprop:Generator_UserColumnName="ProblemID" type="xs:int" />
-              <xs:element name="VehicleNumber" msprop:Generator_ColumnVarNameInTable="columnVehicleNumber" msprop:Generator_ColumnPropNameInRow="VehicleNumber" msprop:Generator_ColumnPropNameInTable="VehicleNumberColumn" msprop:Generator_UserColumnName="VehicleNumber">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="TransactionDAte" msprop:Generator_ColumnVarNameInTable="columnTransactionDAte" msprop:Generator_ColumnPropNameInRow="TransactionDAte" msprop:Generator_ColumnPropNameInTable="TransactionDAteColumn" msprop:Generator_UserColumnName="TransactionDAte" type="xs:dateTime" />
+              <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" />
               <xs:element name="Problem" msprop:Generator_ColumnVarNameInTable="columnProblem" msprop:Generator_ColumnPropNameInRow="Problem" msprop:Generator_ColumnPropNameInTable="ProblemColumn" msprop:Generator_UserColumnName="Problem">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -60,9 +55,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ProblemSolved" msprop:Generator_ColumnVarNameInTable="columnProblemSolved" msprop:Generator_ColumnPropNameInRow="ProblemSolved" msprop:Generator_ColumnPropNameInTable="ProblemSolvedColumn" msprop:Generator_UserColumnName="ProblemSolved" type="xs:boolean" />
-              <xs:element name="ProblemCost" msprop:Generator_ColumnVarNameInTable="columnProblemCost" msprop:Generator_ColumnPropNameInRow="ProblemCost" msprop:Generator_ColumnPropNameInTable="ProblemCostColumn" msprop:Generator_UserColumnName="ProblemCost" type="xs:double" />
-              <xs:element name="VendorName" msprop:Generator_ColumnVarNameInTable="columnVendorName" msprop:Generator_ColumnPropNameInRow="VendorName" msprop:Generator_ColumnPropNameInTable="VendorNameColumn" msprop:Generator_UserColumnName="VendorName">
+              <xs:element name="VehicleID" msprop:Generator_ColumnVarNameInTable="columnVehicleID" msprop:Generator_ColumnPropNameInRow="VehicleID" msprop:Generator_ColumnPropNameInTable="VehicleIDColumn" msprop:Generator_UserColumnName="VehicleID" type="xs:int" />
+              <xs:element name="ProblemStatus" msprop:Generator_ColumnVarNameInTable="columnProblemStatus" msprop:Generator_ColumnPropNameInRow="ProblemStatus" msprop:Generator_ColumnPropNameInTable="ProblemStatusColumn" msprop:Generator_UserColumnName="ProblemStatus" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -76,14 +70,20 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="InvoiceID" msprop:Generator_ColumnVarNameInTable="columnInvoiceID" msprop:Generator_ColumnPropNameInRow="InvoiceID" msprop:Generator_ColumnPropNameInTable="InvoiceIDColumn" msprop:Generator_UserColumnName="InvoiceID" type="xs:int" minOccurs="0" />
+              <xs:element name="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" msprop:Generator_UserColumnName="InvoiceDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvoiceAmount" msprop:Generator_ColumnVarNameInTable="columnInvoiceAmount" msprop:Generator_ColumnPropNameInRow="InvoiceAmount" msprop:Generator_ColumnPropNameInTable="InvoiceAmountColumn" msprop:Generator_UserColumnName="InvoiceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvoicePath" msprop:Generator_ColumnVarNameInTable="columnInvoicePath" msprop:Generator_ColumnPropNameInRow="InvoicePath" msprop:Generator_ColumnPropNameInTable="InvoicePathColumn" msprop:Generator_UserColumnName="InvoicePath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:FindAllVehicleMainProblemsByVehicleID" />
-      <xs:field xpath="mstns:ProblemID" />
-    </xs:unique>
   </xs:element>
 </xs:schema>
