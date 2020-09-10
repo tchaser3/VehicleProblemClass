@@ -32,6 +32,8 @@
               <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
               <Mapping SourceColumn="InvoiceAmount" DataSetColumn="InvoiceAmount" />
               <Mapping SourceColumn="InvoicePath" DataSetColumn="InvoicePath" />
+              <Mapping SourceColumn="ProblemSolved" DataSetColumn="ProblemSolved" />
+              <Mapping SourceColumn="TransactionDate1" DataSetColumn="TransactionDate1" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -43,7 +45,7 @@
   <xs:element name="FindAllVehicleMainProblemsByVehicleIDDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindAllVehicleMainProblemsByVehicleIDDataSet" msprop:Generator_UserDSName="FindAllVehicleMainProblemsByVehicleIDDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_TableClassName="FindAllVehicleMainProblemsByVehicleIDDataTable" msprop:Generator_TableVarName="tableFindAllVehicleMainProblemsByVehicleID" msprop:Generator_TablePropName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowDeletingName="FindAllVehicleMainProblemsByVehicleIDRowDeleting" msprop:Generator_RowChangingName="FindAllVehicleMainProblemsByVehicleIDRowChanging" msprop:Generator_RowEvHandlerName="FindAllVehicleMainProblemsByVehicleIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindAllVehicleMainProblemsByVehicleIDRowDeleted" msprop:Generator_UserTableName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowChangedName="FindAllVehicleMainProblemsByVehicleIDRowChanged" msprop:Generator_RowEvArgName="FindAllVehicleMainProblemsByVehicleIDRowChangeEvent" msprop:Generator_RowClassName="FindAllVehicleMainProblemsByVehicleIDRow">
+        <xs:element name="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_TableClassName="FindAllVehicleMainProblemsByVehicleIDDataTable" msprop:Generator_TableVarName="tableFindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowChangedName="FindAllVehicleMainProblemsByVehicleIDRowChanged" msprop:Generator_TablePropName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowDeletingName="FindAllVehicleMainProblemsByVehicleIDRowDeleting" msprop:Generator_RowChangingName="FindAllVehicleMainProblemsByVehicleIDRowChanging" msprop:Generator_RowEvHandlerName="FindAllVehicleMainProblemsByVehicleIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindAllVehicleMainProblemsByVehicleIDRowDeleted" msprop:Generator_RowClassName="FindAllVehicleMainProblemsByVehicleIDRow" msprop:Generator_UserTableName="FindAllVehicleMainProblemsByVehicleID" msprop:Generator_RowEvArgName="FindAllVehicleMainProblemsByVehicleIDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProblemID" msprop:Generator_ColumnVarNameInTable="columnProblemID" msprop:Generator_ColumnPropNameInRow="ProblemID" msprop:Generator_ColumnPropNameInTable="ProblemIDColumn" msprop:Generator_UserColumnName="ProblemID" type="xs:int" />
@@ -80,6 +82,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ProblemSolved" msprop:Generator_ColumnVarNameInTable="columnProblemSolved" msprop:Generator_ColumnPropNameInRow="ProblemSolved" msprop:Generator_ColumnPropNameInTable="ProblemSolvedColumn" msprop:Generator_UserColumnName="ProblemSolved" type="xs:boolean" />
+              <xs:element name="TransactionDate1" msprop:Generator_ColumnVarNameInTable="columnTransactionDate1" msprop:Generator_ColumnPropNameInRow="TransactionDate1" msprop:Generator_ColumnPropNameInTable="TransactionDate1Column" msprop:Generator_UserColumnName="TransactionDate1" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

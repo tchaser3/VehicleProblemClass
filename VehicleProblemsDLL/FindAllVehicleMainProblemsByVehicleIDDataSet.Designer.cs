@@ -299,6 +299,10 @@ namespace VehicleProblemsDLL {
             
             private global::System.Data.DataColumn columnInvoicePath;
             
+            private global::System.Data.DataColumn columnProblemSolved;
+            
+            private global::System.Data.DataColumn columnTransactionDate1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindAllVehicleMainProblemsByVehicleIDDataTable() {
@@ -414,6 +418,22 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProblemSolvedColumn {
+                get {
+                    return this.columnProblemSolved;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TransactionDate1Column {
+                get {
+                    return this.columnTransactionDate1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +469,7 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindAllVehicleMainProblemsByVehicleIDRow AddFindAllVehicleMainProblemsByVehicleIDRow(int ProblemID, System.DateTime TransactionDate, string Problem, int VehicleID, string ProblemStatus, string ProblemResolution, int InvoiceID, System.DateTime InvoiceDate, decimal InvoiceAmount, string InvoicePath) {
+            public FindAllVehicleMainProblemsByVehicleIDRow AddFindAllVehicleMainProblemsByVehicleIDRow(int ProblemID, System.DateTime TransactionDate, string Problem, int VehicleID, string ProblemStatus, string ProblemResolution, int InvoiceID, System.DateTime InvoiceDate, decimal InvoiceAmount, string InvoicePath, bool ProblemSolved, System.DateTime TransactionDate1) {
                 FindAllVehicleMainProblemsByVehicleIDRow rowFindAllVehicleMainProblemsByVehicleIDRow = ((FindAllVehicleMainProblemsByVehicleIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ProblemID,
@@ -461,7 +481,9 @@ namespace VehicleProblemsDLL {
                         InvoiceID,
                         InvoiceDate,
                         InvoiceAmount,
-                        InvoicePath};
+                        InvoicePath,
+                        ProblemSolved,
+                        TransactionDate1};
                 rowFindAllVehicleMainProblemsByVehicleIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindAllVehicleMainProblemsByVehicleIDRow);
                 return rowFindAllVehicleMainProblemsByVehicleIDRow;
@@ -494,6 +516,8 @@ namespace VehicleProblemsDLL {
                 this.columnInvoiceDate = base.Columns["InvoiceDate"];
                 this.columnInvoiceAmount = base.Columns["InvoiceAmount"];
                 this.columnInvoicePath = base.Columns["InvoicePath"];
+                this.columnProblemSolved = base.Columns["ProblemSolved"];
+                this.columnTransactionDate1 = base.Columns["TransactionDate1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,6 +543,10 @@ namespace VehicleProblemsDLL {
                 base.Columns.Add(this.columnInvoiceAmount);
                 this.columnInvoicePath = new global::System.Data.DataColumn("InvoicePath", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInvoicePath);
+                this.columnProblemSolved = new global::System.Data.DataColumn("ProblemSolved", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProblemSolved);
+                this.columnTransactionDate1 = new global::System.Data.DataColumn("TransactionDate1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionDate1);
                 this.columnProblemID.AllowDBNull = false;
                 this.columnTransactionDate.AllowDBNull = false;
                 this.columnProblem.AllowDBNull = false;
@@ -527,6 +555,8 @@ namespace VehicleProblemsDLL {
                 this.columnProblemStatus.MaxLength = 2147483647;
                 this.columnProblemResolution.MaxLength = 2147483647;
                 this.columnInvoicePath.MaxLength = 2147483647;
+                this.columnProblemSolved.AllowDBNull = false;
+                this.columnTransactionDate1.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -815,6 +845,28 @@ namespace VehicleProblemsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool ProblemSolved {
+                get {
+                    return ((bool)(this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemSolvedColumn]));
+                }
+                set {
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.ProblemSolvedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime TransactionDate1 {
+                get {
+                    return ((global::System.DateTime)(this[this.tableFindAllVehicleMainProblemsByVehicleID.TransactionDate1Column]));
+                }
+                set {
+                    this[this.tableFindAllVehicleMainProblemsByVehicleID.TransactionDate1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsProblemStatusNull() {
                 return this.IsNull(this.tableFindAllVehicleMainProblemsByVehicleID.ProblemStatusColumn);
             }
@@ -1055,6 +1107,8 @@ namespace VehicleProblemsDLL.FindAllVehicleMainProblemsByVehicleIDDataSetTableAd
             tableMapping.ColumnMappings.Add("InvoiceDate", "InvoiceDate");
             tableMapping.ColumnMappings.Add("InvoiceAmount", "InvoiceAmount");
             tableMapping.ColumnMappings.Add("InvoicePath", "InvoicePath");
+            tableMapping.ColumnMappings.Add("ProblemSolved", "ProblemSolved");
+            tableMapping.ColumnMappings.Add("TransactionDate1", "TransactionDate1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
