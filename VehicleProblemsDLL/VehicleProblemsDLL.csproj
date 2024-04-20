@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VehicleProblemsDLL</RootNamespace>
     <AssemblyName>VehicleProblemsDLL</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -235,7 +236,6 @@
     </None>
     <None Include="FindAllVehicleMainProblemsByDateRangeDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FindAllVehicleMainProblemsByDateRangeDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="FindAllVehicleMainProblemsByDateRangeDataSet.xss">
